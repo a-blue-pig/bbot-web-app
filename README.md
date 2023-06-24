@@ -42,6 +42,20 @@ Ignore the vulnerability warnings. This is a new feature from npm.
 
 
 ---
+## Run Application
+Start Node Server
+```
+cd tbot-web/ros-humble/react-ros-robot &&\
+npm start
+```
+Start Ros Bridge on Port 9090
+```
+source /opt/ros/humble/setup.bash       # Source Ros2
+ros2 launch rosbridge_server rosbridge_websocket_launch.xml
+```
+
+
+---
 ## Configuration/Breakdown
 Important Files and Directories
 ```
