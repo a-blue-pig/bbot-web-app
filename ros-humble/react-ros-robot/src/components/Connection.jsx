@@ -35,9 +35,7 @@ function Connection() {
                 } catch (error) {
                     console.log('error initiating connection');
                 }
-
             }, 1000);
-            
         });
     }
 
