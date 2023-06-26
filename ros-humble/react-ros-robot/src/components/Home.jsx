@@ -1,5 +1,5 @@
 import Connection from './Connection';
-import Teleoperation from './Teleoperation2';
+import Teleoperation from './Teleoperation';
 import Map from './Map';
 import { Row, Col, Container, Button } from 'react-bootstrap';
 

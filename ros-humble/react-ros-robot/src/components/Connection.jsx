@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Alert from "react-bootstrap/Alert"
 import Config from "../scripts/Config"
-import ROSLIB from 'roslib/build/roslib.js';
+import ROSLIB from 'roslib'
 
 function Connection() {
     const [connected, isConnected] = useState(false);
-    const ros = new window.ROSLIB.Ros({ encoding: 'ascii' })
+    const ros = new ROSLIB.Ros({ encoding: 'ascii' })
 
     function initConnection() {
         ros.connect("ws://" + Config.ROSBRIDGE_SERVER_IP + ":" + Config.ROSBRIDGE_SERVER_PORT);
@@ -36,7 +36,7 @@ function Connection() {
                 } catch (error) {
                     console.log('error initiating connection');
                 }
-            }, 1000);
+            }, Config.RECONNECTION_TIMER);
         });
     }
 
