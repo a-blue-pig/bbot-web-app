@@ -3,6 +3,8 @@ import { Joystick } from "react-joystick-component";
 import Config from "../scripts/Config";
 import ROSLIB from 'roslib';
 
+// Using a class instead so that we can bind ros to the
+// publisher function.
 class Teleoperation extends Component {
   state = { ros: null };
 
@@ -10,9 +12,12 @@ class Teleoperation extends Component {
     super();
     this.init_connection();
 
+    // create the binds to use the functions
     this.handleMove = this.handleMove.bind(this);
     this.handleStop = this.handleStop.bind(this);
   }
+
+  // connect to the websocket (from tutorial)
   init_connection() {
     this.state.ros = new ROSLIB.Ros();
     console.log(this.state.ros);
@@ -68,6 +73,9 @@ class Teleoperation extends Component {
     }
   }
 
+
+
+  // Function for when the joystick is moved
   handleMove(event) {
     // create a ROS publisher on the topic cmd_vel
     var cmd_vel = new ROSLIB.Topic({
@@ -94,6 +102,9 @@ class Teleoperation extends Component {
     cmd_vel.publish(twist);
   }
 
+
+
+  // Function for when we let go of the joystick
   handleStop(event) {
     // create a ROS publisher on the topic cmd_vel
     var cmd_vel = new ROSLIB.Topic({
@@ -119,6 +130,7 @@ class Teleoperation extends Component {
     //we need to publish the message on the cmd_vel topic
     cmd_vel.publish(twist);
   }
+
 
   render() {
     return (

@@ -1,7 +1,9 @@
+import { Row, Col, Container, Button } from 'react-bootstrap';
+
+import RobotStats from './RobotStats';
 import Connection from './Connection';
 import Teleoperation from './Teleoperation';
 import Map from './Map';
-import { Row, Col, Container, Button } from 'react-bootstrap';
 
 function Home() {
     return (
@@ -15,12 +17,18 @@ function Home() {
                         <Connection />
                     </Col>
                 </Row>
+
                 <Row>
                     <Col>
                         <Teleoperation />
                     </Col>
                     <Col>
                         <Map />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <RobotStats />
                     </Col>
                 </Row>
             </Container>
