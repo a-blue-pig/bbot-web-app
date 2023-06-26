@@ -1,14 +1,10 @@
 import { Joystick } from 'react-joystick-component';
 import React, { Component, useState } from "react";
 import Config from '../scripts/Config';
+import ROSLIB from 'roslib/build/roslib.js';
 
+function Teleoperation()  {
 
-class Teleoperation extends Component {
-
-    state = { ros: null};
-    constructor () {
-
-    }
     const [connected, isConnected] = useState(false);
     const ros = new window.ROSLIB.Ros({ encoding: 'ascii' });
 
