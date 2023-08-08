@@ -1,4 +1,4 @@
-# TBot Web Navigation App
+# BumpyBot Web Navigation App
 
 ### Tools Used:
 * React (JS)
