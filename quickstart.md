@@ -12,11 +12,11 @@ curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
 
 # Clone Repo
-git clone git@github.com:a-blue-pig/tbot-web.git -b roslibjs       # ssh or
-git clone https://github.com/a-blue-pig/tbot-web.git -b roslibjs   # http
+git clone git@github.com:a-blue-pig/bbot-web-app.git -b roslibjs       # ssh or
+git clone https://github.com/a-blue-pig/bbot-web-app.git -b roslibjs   # http
 
 # Install Dependencies
-cd tbot-web/ros-humble/react-ros-robot &&\
+cd bbot-web-app/ros-humble/react-ros-robot &&\
 npm install
 ```
 
@@ -24,7 +24,7 @@ npm install
 ## Run
 ```
 # Start Node Server
-cd tbot-web/ros-humble/react-ros-robot &&\
+cd bbot-web-app/ros-humble/react-ros-robot &&\
 npm start
 
 # Start Ros Bridge on Port 9090
