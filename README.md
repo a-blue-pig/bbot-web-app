@@ -36,7 +36,7 @@ Check NodeJS and NPM versions with
 ```
 git clone git@github.com:a-blue-pig/bbot-web-app.git       # ssh or
 git clone https://github.com/a-blue-pig/bbot-web-app.git   # http
-cd tbot-web/ros-humble/react-ros-robot
+cd bbot-web-app/ros-humble/react-ros-robot
 npm install
 ```
 Ignore the vulnerability warnings. This is a new feature from npm.
@@ -46,7 +46,7 @@ Ignore the vulnerability warnings. This is a new feature from npm.
 ## Run Application
 Start Node Server
 ```
-cd tbot-web/ros-humble/react-ros-robot &&\
+cd bbot-web-app/ros-humble/react-ros-robot &&\
 npm start
 ```
 Start Ros Bridge on Port 9090
