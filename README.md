@@ -23,7 +23,8 @@ sudo apt install ros-humble-rosbridge-server
 #### NODE JS >=18.16.1 (includes npm 9.5.1)
 Install the latest LTS version
 1. Install from their [website]([https://github.com/nodesource/distributions](https://nodejs.org/en/download).
-2. Install using package manager. [Instructions here](https://github.com/nodesource/distributions). \
+2. Install using script; [Instructions here](https://github.com/nodesource/distributions).
+3. Install using nvm (recommended) [Instructions here](https://github.com/nvm-sh/nvm#install--update-script).
 
 Check NodeJS and NPM versions with
 
@@ -33,8 +34,8 @@ Check NodeJS and NPM versions with
 ---
 ## Install
 ```
-git clone git@github.com:a-blue-pig/tbot-web.git       # ssh or
-git clone https://github.com/a-blue-pig/tbot-web.git   # http
+git clone git@github.com:a-blue-pig/bbot-web-app.git       # ssh or
+git clone https://github.com/a-blue-pig/bbot-web-app.git   # http
 cd tbot-web/ros-humble/react-ros-robot
 npm install
 ```
