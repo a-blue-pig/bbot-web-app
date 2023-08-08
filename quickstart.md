@@ -12,8 +12,8 @@ curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
 
 # Clone Repo
-git clone git@github.com:a-blue-pig/bbot-web-app.git -b roslibjs       # ssh or
-git clone https://github.com/a-blue-pig/bbot-web-app.git -b roslibjs   # http
+git clone git@github.com:a-blue-pig/bbot-web-app.git       # ssh or
+git clone https://github.com/a-blue-pig/bbot-web-app.git   # http
 
 # Install Dependencies
 cd bbot-web-app/ros-humble/react-ros-robot &&\
