@@ -5,8 +5,8 @@ import Config from '../scripts/Config';
 
 function RobotStats() {
     const [connected, isConnected] = useState(false);
-    const [linear_vel, update_lin_vel] = useState({vel: 0});
-    const [angular_vel, update_ang_vel] = useState({omega: 0});
+    const [linear_vel, update_lin_vel] = useState({vel: 0.0});
+    const [angular_vel, update_ang_vel] = useState({omega: 0.0});
 
     const ros = new ROSLIB.Ros({ encoding: 'ascii' })
 
@@ -49,6 +49,7 @@ function RobotStats() {
         ros: ros,
         name: Config.VEL_STATS_TOPIC,
         messageType: Config.VEL_STATS_MSG_TYPE,
+        queue_size: 10
     });
 
     // Subscriber function

@@ -37,7 +37,7 @@ class Teleoperation extends Component {
     this.state.ros.on("close", () => {
       console.log("connection is closed!");
       this.setState({ connected: false });
-      //try to reconnect every 3 seconds
+      //try to reconnect every x seconds
       setTimeout(() => {
         try {
           this.state.ros.connect(
@@ -62,13 +62,6 @@ class Teleoperation extends Component {
           ""
       );
     } catch (error) {
-      console.log(
-        "ws://" +
-          Config.ROSBRIDGE_SERVER_IP +
-          ":" +
-          Config.ROSBRIDGE_SERVER_PORT +
-          ""
-      );
       console.log("connection problem ");
     }
   }
